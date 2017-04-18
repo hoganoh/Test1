@@ -102,9 +102,9 @@ namespace WinFormApp
                 var playerScoreList = scoreList.Where(s => s.Player == playerName).ToList();
 
                 int cRound = 10;
-                if (scoreList.Count() < 20)
+                if (playerScoreList.Count() < 20)
                 {
-                    cRound = Convert.ToInt32(Math.Floor(scoreList.Count() * 1.0 / 2)) - 1;
+                    cRound = Convert.ToInt32(Math.Floor(playerScoreList.Count() * 1.0 / 2)) - 1;
                     if (cRound < 1)
                     {
                         cRound = 1;
